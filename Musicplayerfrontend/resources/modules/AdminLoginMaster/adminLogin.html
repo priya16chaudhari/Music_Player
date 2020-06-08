@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin Login Page</title>
+<!--  <script >
+    $('.js-tilt').tilt({
+      scale: 1.1
+    })
+  </script> -->
+  <style type="text/css">
+    .a
+    {
+      background-image: url("resources/assets/images/adminn.jpg");
+    }
+
+
+  </style>
+</head>
+<body>
+  
+  <div ng-controller="adminLoginCtrl">
+        <div class="limiter">
+    <div class="container-login100 a">
+      <div class="wrap-login100 ">
+        <div class="login100-pic">
+          <img src="resources/assets/images/adminimg.gif">
+        </div>
+
+        <form class="login100-form validate-form">    
+      <!--    <img src="resources/assets/images/adminn.jpg"> -->
+          <span class="login100-form-title">
+           <h2 style="color: black;">🅰🅳🅼🅸🅽 🅻🅾🅶🅸🅽</h2>
+
+          </span>
+
+          <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+            <input class="input100" type="text" name="email" ng-mdeol="adminObj.adminName" placeholder="Email">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+          </div>
+
+          <div class="wrap-input100 validate-input" data-validate = "Password is required">
+            <input class="input100" type="password"  ng-mdeol="adminObj.adminPassword"  name="pass" placeholder="Password">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-lock" aria-hidden="true"></i>
+            </span>
+          </div>
+          
+          <div class="container-login100-form-btn">
+            <button class="login100-form-btn">
+              Login
+            </button>
+          </div>
+
+          <div class="text-center p-t-12">
+            <span class="txt1">
+              Forgot
+            </span>
+            <a class="txt2" href="#">
+              Username / Password?
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+</body>
+
+</html>

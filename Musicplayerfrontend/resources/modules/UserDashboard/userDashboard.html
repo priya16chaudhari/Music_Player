@@ -1,0 +1,165 @@
+<html>
+<head>
+
+<style>
+    
+    
+    html{cursor:pointer !important;}
+    .uk-navbar{background: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6)!important;}
+    .uk-background-primary{ background: linear-gradient(to top, #667db6, #0082c8, #0082c8, #667db6)}
+    .borders{border-top-left-radius:20px !important;border-bottom-right-radius:20px !important;}
+
+    hr
+    {
+        margin-top: -5px;
+        width: 240px;
+    }
+</style>    
+</head>
+<body>
+<div ng-controller="userDashboardCtrl">
+    <!-- Navbar --> 
+    <div class="w3-teal">
+ <nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="uk-navbar-left">
+        
+        <div class="uk-navbar-item">
+           <img src="https://img.icons8.com/cotton/64/000000/menu.png" uk-toggle="target: #offcanvas">
+        </div>
+        <div class="uk-navbar-item">
+        <img class="uk-logo uk-margin-top uk-margin-bottom" data-src="resources/assets/images/logo.jpg" width="150px" height="150px" alt="" uk-img>
+        </div>
+       <!--  <ul class="uk-navbar-nav uk-subnav-divider">
+            <li class="uk-active uk-margin-small-right"><a href="#">Home</a></li>
+            <li class="uk-active uk-margin-small-right"><a href="#">Graphs</a></li>
+            <li class="uk-active uk-margin-small-right"><a href="#">Stats</a></li>
+        </ul>
+ -->
+        
+
+    </div>
+    <div class="uk-margin-medium-left uk-navbar-right uk-margin-medium-right">
+
+        <div>
+            <a class="uk-navbar-toggle" uk-search-icon href="#"></a>
+            <div class="uk-drop" uk-drop="mode: click; pos: left-center; offset: 0">
+                <form class="uk-search uk-search-navbar uk-width-1-1">
+                    <input class="uk-search-input"  type="search" placeholder="Search..." onautofocus>
+                </form>
+            </div>
+        </div>
+
+    </div>
+<!-- 
+<button class="uk-button uk-button-default uk-margin-small-right" type="button" >Open</button>
+ -->
+ <div class="uk-margin-medium-right uk-margin-medium-top">
+<span class="uk-label-danger borders uk-padding-small uk-margin-small-right" uk-icon="icon:sign-out;ratio:1.2" uk-toggle="target: #modal-example">Logout &nbsp</span>
+</div>
+<div class="uk-margin-medium-top uk-margin-medium-right">
+
+<span class="uk-label-warning w3-circle uk-padding-small uk-margin-small-right"  uk-toggle="target: #offcanvas-flip" uk-icon="icon:cog;ratio:1.2"></span>
+</div>
+
+
+<div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar w3-teal" >
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+
+
+<div id="offcanvas" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-background-primary">
+<div class="uk-child-width-expand@s" uk-grid>
+    
+    <div>
+
+               <center><h3><a ui-sref="adminDashboard">Dashboard</a></h3></center>
+        <!-- uk-list-large uk-list-divider -->
+         <ul class="uk-margin-medium-top uk-list ">
+            <li><a ui-sref="userGenerMaster">Genere Wise Songs<span class=" uk-align-right uk-margin-small-left" uk-icon="icon:plus-circle;ratio:1.2 "></span></a></li><hr>
+            <li><a ui-sref="userArtistMaster">Artist Wise Songs<span class="uk-margin-small-left uk-align-right" uk-icon="icon:users;ratio:1.2 "></span></a></li><hr>
+            <li><a ui-sref="userActorMaster">Actor Wise Songs<span class="uk-margin-small-left  uk-align-right" uk-icon="icon:user;ratio:1.2 "></span></a></li><hr>
+          <!--   <li><a ui-sref="AllsongMaster">Song Wise Songs<span class="uk-margin-small-left  uk-align-right" uk-icon="icon:play-circle;ratio:1.2 "></span></a></li><hr> -->
+            <li><a ui-sref="userWeatherMaster">Weather Wise Songs<span class="uk-margin-small-left  uk-align-right" uk-icon="icon:world;ratio:1.2 "></span></a></li><hr>
+            <li><a ui-sref="userLanguageMaster">Language Wise Songs<span class="uk-margin-small-left  uk-align-right" uk-icon="icon:info;ratio:1.2 "></span></a></li><hr>
+            <li><a ui-sref="albumMaster">Album Wise Songs<span class="uk-margin-small-left  uk-align-right" uk-icon="icon:youtube;ratio:1.2 "></span></a></li><hr>
+            <li><a ui-sref="playlistMaster">Playlist Wise Songs<span class="uk-margin-small-left  uk-align-right" uk-icon="icon:cloud-upload;ratio:1.2 "></span></a></li>          
+        </ul>
+    </div>
+    </div>
+</div>
+</div>
+
+
+
+<!-- This is the modal -->
+<div id="modal-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">Headline</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary" type="button">Save</button>
+        </p>
+    </div>
+</div>
+</nav>
+    </div>
+
+   <!--  Nav bar ended  -->
+
+     <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+    <!-- <div>
+        <div class="uk-animation-fade uk-margin-large-left uk-card uk-card-default uk-card-body">
+            <h1 class="uk-card-title" style="font-family: 'Josefin Sans', sans-serif;">Artist wise count</h1>
+            <div id="donutchart" class="uk-align-center" style="width: 270px; height: 150px;padding:none !important"></div>
+        </div>
+    </div> -->
+    <div>
+        <div class="uk-card uk-card-default uk-animation-fade uk-card-body">
+            
+            <h1 class="uk-card-title" style="font-family: 'Josefin Sans', sans-serif;">Total Songs</h1>
+            
+            <h1 class="uk-heading-2xlarge uk-animation-fade" >50</h1>
+              
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-animation-fade uk-card-default uk-card-body">
+            <h1 class="uk-card-title" style="font-family: 'Josefin Sans', sans-serif;">Most Listened Songs</h1>
+            
+          <ul class="uk-margin uk-list uk-align-center uk-list-divider">
+            <li> <span class="uk-animation-shake uk-badge uk-align-left">1</span> Jai jai shivshankar - WAR</li>
+            <li> <span class="uk-animation-shake uk-badge uk-align-left">2</span>Ole ole 2.0</li>
+            <li> <span class="uk-animation-shake uk-badge uk-align-left">3</span>Maay Bhavani - Tanhaji</li>
+            <li> <span class="uk-animation-shake uk-badge uk-align-left">4</span>Chan kitthan by Ayushmaan</li>
+            <li> <span class="uk-animation-shake uk-badge uk-align-left">5</span>Main rahoon - Armaan Malik</li>
+          </ul>
+
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-animation-fade uk-card-body">
+            
+            <h1 class="uk-card-title" style="font-family: 'Josefin Sans', sans-serif;">No. of Users</h1>
+            
+            <h1 class="uk-heading-2xlarge uk-animation-fade" >10</h1>
+              
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>

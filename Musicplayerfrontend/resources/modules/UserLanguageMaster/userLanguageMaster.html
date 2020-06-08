@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <link href="https://fonts.googleapis.com/css?family=Caladea&display=swap" rel="stylesheet"> 
+
+	<title>User Language</title>
+	<style type="text/css">
+
+.mt40{margin-top:40px;}
+
+ a{text-decoration:none !important;opacity:0.7 !important}
+ a:hover{opacity:1 !important;}
+
+
+/*.uk-card
+{
+     background: -webkit-linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);  Chrome 10-25, Safari 5.1-6 
+  background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+}*/
+
+
+html{cursor:pointer !important;}
+    .uk-navbar{background: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6)!important;}
+    .uk-background-primary{ background: linear-gradient(to top, #667db6, #0082c8, #0082c8, #667db6)}
+    .borders{border-top-left-radius:20px !important;border-bottom-right-radius:20px !important;}
+    .back{background-image:url(resources/assets/images/modal.jpg) !important;background-position:50% 0% !important;}
+  </style>
+
+</head>
+<body>
+<div ng-controller="userLanguageCntrl">
+
+ <form name="userLanguageForm">
+
+
+
+    <!-- Navbar --> 
+    <div class="w3-teal">
+ <nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="uk-navbar-left">
+        
+        <div class="uk-navbar-item">
+           <img src="https://img.icons8.com/cotton/64/000000/menu.png" uk-toggle="target: #offcanvas">
+        </div>
+        <div class="uk-navbar-item">
+        <img class="uk-logo uk-margin-top uk-margin-bottom" data-src="resources/assets/images/logo.jpg" width="150px" height="150px" alt="" uk-img>
+        </div>
+        <ul class="uk-navbar-nav uk-subnav-divider">
+            <li class="uk-active uk-margin-small-right"><a href="#">Home</a></li>
+            <li class="uk-active uk-margin-small-right"><a href="#">Graphs</a></li>
+            <li class="uk-active uk-margin-small-right"><a href="#">Stats</a></li>
+        </ul>
+
+        
+
+    </div>
+    <div class="uk-margin-medium-left uk-navbar-right uk-margin-medium-right">
+
+        <div>
+            <a class="uk-navbar-toggle" uk-search-icon href="#"></a>
+            <div class="uk-drop" uk-drop="mode: click; pos: left-center; offset: 0">
+                <form class="uk-search uk-search-navbar uk-width-1-1">
+                    <input class="uk-search-input"  type="search" placeholder="Search..." onautofocus>
+                </form>
+            </div>
+        </div>
+
+    </div>
+<!-- 
+<button class="uk-button uk-button-default uk-margin-small-right" type="button" >Open</button>
+ -->
+ <div class="uk-margin-medium-right uk-margin-medium-top">
+<span class="uk-label-danger borders uk-padding-small uk-margin-small-right" uk-icon="icon:sign-out;ratio:1.2" uk-toggle="target: #modal-example">Logout &nbsp</span>
+</div>
+<div class="uk-margin-medium-top uk-margin-medium-right">
+
+<span class="uk-label-warning w3-circle uk-padding-small uk-margin-small-right"  uk-toggle="target: #offcanvas-flip" uk-icon="icon:cog;ratio:1.2"></span>
+</div>
+
+
+<div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar w3-teal" >
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+
+
+<div id="offcanvas" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-background-primary">
+<div class="uk-child-width-expand@s" uk-grid>
+    
+    <div>
+
+               <center><h3>Dashboard</h3></center>
+         <ul class="uk-margin-medium-top uk-list ">
+            <li><a ui-sref="userGenerMaster">Genere Wise Songs<span class=" uk-align-right uk-margin-small-left" uk-icon="icon:plus-circle;ratio:1.2 "></span></a></li><hr>
+            <li><a ui-sref="userArtistMaster">Artist Wise Songs<span class="uk-margin-small-left uk-align-right" uk-icon="icon:users;ratio:1.2 "></span></a></li><hr>
+            <li><a ui-sref="userActorMaster">Actor Wise Songs<span class="uk-margin-small-left  uk-align-right" uk-icon="icon:user;ratio:1.2 "></span></a></li><hr>
+          <!--   <li><a ui-sref="AllsongMaster">Song Wise Songs<span class="uk-margin-small-left  uk-align-right" uk-icon="icon:play-circle;ratio:1.2 "></span></a></li><hr> -->
+            <li><a ui-sref="userWeatherMaster">Weather Wise Songs<span class="uk-margin-small-left  uk-align-right" uk-icon="icon:world;ratio:1.2 "></span></a></li><hr>
+            <li><a ui-sref="userLanguageMaster">Language Wise Songs<span class="uk-margin-small-left  uk-align-right" uk-icon="icon:info;ratio:1.2 "></span></a></li><hr>
+            <li><a ui-sref="albumMaster">Album Wise Songs<span class="uk-margin-small-left  uk-align-right" uk-icon="icon:youtube;ratio:1.2 "></span></a></li><hr>
+            <li><a ui-sref="playlistMaster">Playlist Wise Songs<span class="uk-margin-small-left  uk-align-right" uk-icon="icon:cloud-upload;ratio:1.2 "></span></a></li>          
+        </ul>
+    </div>
+    </div>
+</div>
+</div>
+
+
+
+<!-- This is the modal -->
+<div id="modal-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body back w3-center">
+        <h2 class="uk-modal-title fontsize12">Logout</h2>
+           <img src="resources/assets/images/nik.png" class="uk-margin-top" height="200px" width="200px">
+                <p class="uk-margin-large-top">
+            
+            <button class="uk-align-left uk-button uk-button-primary" type="button">Enough For Today</button>
+            <button class="uk-button uk-align-right uk-button-danger uk-modal-close" type="button">Not Done yet</button>
+        </p>
+    </div>
+</div>
+</nav>
+    </div>
+
+
+
+
+
+     <div class="w3-container">
+              <div class="row form-group">
+                  <div class="card-group col-md-5" style="margin-top:3%;padding-left:6% !important">
+                           <div class="w3-card w3-white col-md-12" style="background-color: transparent !important;border-top-left-radius:40px;border-bottom-left-radius:40px">
+                                  <div class="pad">
+                                        
+                                        <div class="container">
+      <div class="shape"><center><h3 class="fonts" style="padding-top:80px;font-size:40px">Language <br>Master</h3>
+      </center>
+      
+      </div>
+    </div>
+                                  </div>
+                            </div>
+                  </div>
+
+
+                  <div class="col-md-7 w3-card w3-white" style="margin-top:3%; margin-left: -60px;border-top-right-radius: 40px;border-bottom-right-radius:40px">
+                           <div class="row uk-margin-top form-group">
+                                <div class="offset-1 col-md-4 pad">   
+                                     <md-input-container class="md-block media11" flex-gt-sm>
+                                     <label class="ubuntu">Song Language</label>
+                                     <md-select ng-model="userLanguageObj.lang" required style="min-width:200px;min-height:40px" ng-change="getSongWiseActiveLangList(userLanguageObj.lang)">
+                                     <md-option ng-repeat="name in activeLangList" value="{{name}}">{{name.languageName}}</md-option>
+                                     </md-select>
+                                  </md-input-container>
+
+
+                                </div>
+
+
+                    <!--             <div class="offset-2 col-md-4 pad">   
+                                      <md-input-container class="md-block" flex-gt-sm>
+<label>Song</label>
+  
+  <div ng-model="userGenereObj.generModel" ng-repeat="data in songList">
+                                        {{data.songName}}
+                                 </div>
+
+                                     
+</md-input-container>
+
+
+                                </div>
+ -->
+
+                              
+                           </div>
+
+
+
+
+                   
+
+                    <div class="row form-group pad" style="margin-bottom:7%;">
+                          <div class="offset-2 col-md-3 pad">  
+                            
+                              <!--  <button type="button" class="btn-hover color-1  w3-btn" ng-click="tblShow(userGenereObj)">OK</button> -->
+                          </div>
+
+                          <div class="offset- col-md-3 pad">  
+                            
+                               <!-- <button type="button" class="btn-hover color-2  w3-btn" ng-click="saveSubject(userGenereObj)">Clear</button> -->
+                          </div>
+                          <div class="col-md-3 pad">  
+                            
+                               <!-- <button type="button" class="btn-hover color-11  w3-btn" >Cancel</button> -->
+                          </div>
+                    </div> 
+
+
+
+
+                    <table class="uk-table uk-table-justify uk-table-divider"  class="table" st-table="songList1" st-safe-src="songList">
+   								 <thead>
+       									 <tr>
+         								   <th class="uk-width-small">Song Id</th>
+         								   <th>Song Name</th>
+            							   <th>Action</th>
+       									 </tr>
+   								 </thead>
+  			 					<tbody>
+  			 						<tr ng-repeat="data in songList1">
+    							  	<td style="color:black">{{$index+1}}</td>
+									<td style="color:black">{{data.songName}}</td>
+									 <td><button class="uk-button uk-button-default" ng-click="getActiveSongUrl(data.songName);">Open</button>
+
+<!-- 
+                      <div id="modal-center" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="offset-1 col-md-4 pad"> 
+                                 <audio controls autoplay>
+
+
+     <source src="{{data.songUrl}}" type="audio/ogg">
+  <source src="{{data.songUrl}}" type="audio/mpeg">
+
+ 
+                            </audio>
+                                </div>
+    </div>
+</div> -->
+
+
+
+                  </td>
+								</tr>
+							   </tbody>
+					</table>
+
+
+
+              </div> <!-- col-md division ended-->
+               </div>
+    </div>
+
+
+</form>
+
+
+</div>
+</body>
+</html>
